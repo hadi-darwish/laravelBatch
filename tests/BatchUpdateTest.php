@@ -3,7 +3,7 @@
 require_once 'BootstrapDatabase.php';
 
 use Carbon\Carbon;
-use Mavinoo\Batch\Batch;
+use Hadi\Batch\Batch;
 
 class BatchUpdateTest extends BootstrapDatabase
 {

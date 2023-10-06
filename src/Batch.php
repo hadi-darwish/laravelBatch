@@ -6,6 +6,7 @@ use Mavinoo\Batch\Common\Common;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Carbon;
+use Illuminate\Database\Capsule\Manager as CapsuleManager;
 
 class Batch implements BatchInterface
 {
@@ -14,7 +15,7 @@ class Batch implements BatchInterface
      */
     protected $db;
 
-    public function __construct(DatabaseManager $db)
+    public function __construct(CapsuleManager $db)
     {
         $this->db = $db;
     }
@@ -65,8 +66,8 @@ class Batch implements BatchInterface
             $index = $table->getKeyName();
         }
 
-        $connection = config('database.default');
-        $driver = config("database.connections.{$connection}.driver");
+        $connection = $this->db->getConnection()->getName();
+        $driver = $this->db->getConnection()->getDriverName();
 
         foreach ($values as $key => $val) {
             $ids[] = $val[$index];
@@ -174,8 +175,8 @@ class Batch implements BatchInterface
     {
         $final = [];
         $ids = [];
-        $connection = config('database.default');
-        $driver = config("database.connections.{$connection}.driver");
+        $connection = $this->db->getConnection()->getName();
+        $driver = $this->db->getConnection()->getDriverName();
 
         if (!count($values)) {
             return false;
@@ -320,8 +321,8 @@ class Batch implements BatchInterface
             }
         }
 
-        $connection = config('database.default');
-        $driver = config("database.connections.{$connection}.driver");
+        $connection = $this->db->getConnection()->getName();
+        $driver = $this->db->getConnection()->getDriverName();
 
         if (Common::disableBacktick($driver)) {
             foreach ($columns as $key => $column) {

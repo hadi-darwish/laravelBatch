@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use Mavinoo\Batch\Batch;
+use Hadi\Batch\Batch;
 
 require_once 'BootstrapDatabase.php';
 

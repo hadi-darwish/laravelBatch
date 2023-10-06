@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Mavinoo\Batch\Common;
+namespace Hadi\Batch\Common;
 
 class Common
 {

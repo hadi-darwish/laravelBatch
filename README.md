@@ -1,24 +1,27 @@
 # Laravel BATCH (BULK)
+
 Insert and update batch (bulk) in laravel
 
-[![License](https://poser.pugx.org/mavinoo/laravel-batch/license)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Latest Stable Version](https://poser.pugx.org/mavinoo/laravel-batch/v/stable)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Total Downloads](https://poser.pugx.org/mavinoo/laravel-batch/downloads)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Daily Downloads](https://poser.pugx.org/mavinoo/laravel-batch/d/daily)](https://packagist.org/packages/mavinoo/laravel-batch)
-
+[![License](https://poser.pugx.org/hadi/laravel-batch/license)](https://packagist.org/packages/hadi/laravel-batch)
+[![Latest Stable Version](https://poser.pugx.org/hadi/laravel-batch/v/stable)](https://packagist.org/packages/hadi/laravel-batch)
+[![Total Downloads](https://poser.pugx.org/hadi/laravel-batch/downloads)](https://packagist.org/packages/hadi/laravel-batch)
+[![Daily Downloads](https://poser.pugx.org/hadi/laravel-batch/d/daily)](https://packagist.org/packages/hadi/laravel-batch)
 
 # Install
-`composer require mavinoo/laravel-batch`
+
+`composer require hadi/laravel-batch`
 
 # Service Provider
+
 file app.php in array providers :
 
-`Mavinoo\Batch\BatchServiceProvider::class,`
+`Hadi\Batch\BatchServiceProvider::class,`
 
 # Aliases
+
 file app.php in array aliases :
 
-`'Batch' => Mavinoo\Batch\BatchFacade::class,`
+`'Batch' => Hadi\Batch\BatchFacade::class,`
 
 # Example Update 1
 
@@ -66,7 +69,7 @@ $value = [
      ],
      [
          'id' => 11,
-         'username' => 'mavinoo'
+         'username' => 'hadi'
      ]
 ];
 $index = 'id';
@@ -148,7 +151,6 @@ $batchSize = 500; // insert 500 (default), 100 minimum rows in one query
 $result = Batch::insert($userInstance, $columns, $values, $batchSize);
 ```
 
-
 ```php
 // result : false or array
 
@@ -168,7 +170,7 @@ Add `HasBatch` trait into model:
 ```php
 namespace App\Models;
 
-use Mavinoo\Batch\Traits\HasBatch;
+use Hadi\Batch\Traits\HasBatch;
 
 class User extends Model
 {
@@ -202,11 +204,13 @@ $result = batch()->insert($userInstance, $columns, $values, $batchSize);
 ```
 
 # Tests
+
 If you don't have phpunit installed on your project, first run `composer require phpunit/phpunit`
 
-In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/mavinoo/laravel-batch/tests`
+In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/hadi/laravel-batch/tests`
 
-# Donate 
+# Donate
+
 BTC Address: 14XQEuVKuZp8q59h3Jk9Q2wi45368aEbyG
 
 DOGE Address: DMsFurgSP2LTny8wkco3cE3ZhgQrFAJLp8

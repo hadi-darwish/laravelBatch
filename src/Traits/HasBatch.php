@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Mavinoo\Batch\Traits;
+namespace Hadi\Batch\Traits;
 
-use Mavinoo\Batch\Batch;
+use Hadi\Batch\Batch;
 
 trait HasBatch
 {
