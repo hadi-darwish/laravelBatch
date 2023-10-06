@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Mavinoo\Batch;
+namespace Hadi\Batch;
 
-use Mavinoo\Batch\Common\Common;
+use Hadi\Batch\Common\Common;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Carbon;
