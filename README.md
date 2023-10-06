@@ -2,14 +2,14 @@
 
 Insert and update batch (bulk) in laravel
 
-[![License](https://poser.pugx.org/hadi/laravel-batch/license)](https://packagist.org/packages/hadi/laravel-batch)
-[![Latest Stable Version](https://poser.pugx.org/hadi/laravel-batch/v/stable)](https://packagist.org/packages/hadi/laravel-batch)
-[![Total Downloads](https://poser.pugx.org/hadi/laravel-batch/downloads)](https://packagist.org/packages/hadi/laravel-batch)
-[![Daily Downloads](https://poser.pugx.org/hadi/laravel-batch/d/daily)](https://packagist.org/packages/hadi/laravel-batch)
+[![License](https://poser.pugx.org/hadi-darwish/laravel-batch/license)](https://packagist.org/packages/hadi-darwish/laravel-batch)
+[![Latest Stable Version](https://poser.pugx.org/hadi-darwish/laravel-batch/v/stable)](https://packagist.org/packages/hadi-darwish/laravel-batch)
+[![Total Downloads](https://poser.pugx.org/hadi-darwish/laravel-batch/downloads)](https://packagist.org/packages/hadi-darwish/laravel-batch)
+[![Daily Downloads](https://poser.pugx.org/hadi-darwish/laravel-batch/d/daily)](https://packagist.org/packages/hadi-darwish/laravel-batch)
 
 # Install
 
-`composer require hadi/laravel-batch`
+`composer require hadi-darwish/laravel-batch`
 
 # Service Provider
 
@@ -69,7 +69,7 @@ $value = [
      ],
      [
          'id' => 11,
-         'username' => 'hadi'
+         'username' => 'hadi-darwish'
      ]
 ];
 $index = 'id';
@@ -207,7 +207,7 @@ $result = batch()->insert($userInstance, $columns, $values, $batchSize);
 
 If you don't have phpunit installed on your project, first run `composer require phpunit/phpunit`
 
-In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/hadi/laravel-batch/tests`
+In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/hadi-darwish/laravel-batch/tests`
 
 # Donate
 
